@@ -22,6 +22,7 @@ An advanced Security Orchestration, Automation, and Response (SOAR) platform int
    - LimaCharlie EDR monitors endpoints
    - Custom detection rules identify suspicious activities
    - LaZagne credential dumping attempts are flagged
+   ![workflow](workflow.png)
 
 2. Alert Processing
    - Tines receives detection alerts
