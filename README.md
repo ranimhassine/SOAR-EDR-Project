@@ -130,4 +130,5 @@ For support:
 - LimaCharlie EDR team
 - Tines automation platform
 - Security community contributors
-- MyDFIR tutorial (https://youtu.be/WPyJR7Y3qb4?si=IVyBmLlvR_4HlXKv°
+- MyDFIR tutorial (https://youtu.be/WPyJR7Y3qb4?si=IVyBmLlvR_4HlXKv)
+- Medium blog (https://medium.com/@ranimhassine48/soar-edr-project-2d15b22c1168)
