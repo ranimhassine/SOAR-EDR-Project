@@ -1,108 +1,126 @@
-Here’s a possible README file for the SOAR-EDR project, based on its GitHub repository and description:
+# 🛡️ SOAR-EDR Automation Platform
 
----
+An advanced Security Orchestration, Automation, and Response (SOAR) platform integrated with LimaCharlie EDR, featuring automated detection, isolation, and response capabilities.
 
-# SOAR-EDR Project
+## 🌟 Features
 
-The **SOAR-EDR Project** integrates **SOAR (Security Orchestration, Automation, and Response)** capabilities with **Endpoint Detection and Response (EDR)** systems. This project demonstrates how automation, orchestration, and endpoint protection can work together to streamline incident response and threat management in a cybersecurity workflow.
+- **Real-time Threat Detection**: Automated monitoring and detection of security threats using LimaCharlie EDR
+- **Smart Isolation Protocol**: User-prompted isolation decisions for infected machines
+- **Slack Integration**: Instant alerts and notifications through Slack channels
+- **Automated Response Actions**: Predefined response playbooks for common threats
+- **LaZagne Attack Detection**: Specialized detection rules for credential dumping attempts
 
----
+## 🏗️ Architecture
 
-## Features
+### Components
+- **LimaCharlie EDR**: Endpoint detection and response
+- **Tines**: Automation and orchestration platform
+- **Slack**: Alert notifications and user interaction
 
-- Integration of SOAR platforms with EDR systems for efficient incident handling.
-- Automated threat detection, investigation, and response workflows.
-- Examples of custom playbooks for handling common security incidents.
-- Log correlation, alert prioritization, and automated remediation.
+### Workflow
+1. Threat Detection
+   - LimaCharlie EDR monitors endpoints
+   - Custom detection rules identify suspicious activities
+   - LaZagne credential dumping attempts are flagged
 
----
+2. Alert Processing
+   - Tines receives detection alerts
+   - Automated workflow triggers response actions
+   - Slack notifications are generated
 
-## Use Cases
+3. User Interaction
+   - Security team receives Slack alerts
+   - Option to isolate infected machines
+   - Automated response based on user decision
 
-- **Threat Detection and Response**: Automatically identify and respond to endpoint threats.
-- **Incident Management**: Streamline and automate repetitive security tasks using SOAR playbooks.
-- **Log Analysis**: Correlate logs and alerts from multiple sources for better threat intelligence.
-- **Scalability**: Designed to integrate with enterprise-level EDR and SOAR tools.
+## 🔍 LaZagne Detection Rule
 
----
-
-## Prerequisites
-
-- **SOAR Platform**: Ensure access to a SOAR solution like [Splunk Phantom](https://www.splunk.com), [Cortex XSOAR](https://www.paloaltonetworks.com/cortex/xsoar), or others.
-- **EDR Solution**: A supported EDR platform such as CrowdStrike, SentinelOne, or Microsoft Defender for Endpoint.
-- **Python**: Required for running scripts or integrations.
-- **APIs**: Ensure API access to both your SOAR and EDR platforms.
-- A basic understanding of security automation and EDR workflows.
-
----
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/nattycoder/SOAR-EDR-Project.git
-   ```
-2. Install required Python libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Configure your API keys and endpoints in the provided configuration file (`config.json` or `.env`).
-
----
-
-## Usage
-
-1. **Set Up API Integrations**:
-   - Update the configuration file with your SOAR and EDR API credentials.
-   - Test the connectivity using the provided test script.
-
-2. **Run Playbooks**:
-   - Choose or customize a playbook to meet your security needs.
-   - Execute playbooks via the SOAR platform or directly using the scripts:
-     ```bash
-     python playbooks/<playbook_name>.py
-     ```
-
-3. **Monitor and Adjust**:
-   - Analyze the outcomes of automated actions.
-   - Fine-tune playbooks or configurations to better suit your environment.
-
----
-
-## Repository Structure
-
-```
-SOAR-EDR-Project/
-├── playbooks/       # Example SOAR playbooks
-├── scripts/         # Custom Python scripts for integration
-├── docs/            # Documentation and guides
-├── config/          # Configuration files
-└── README.md        # Project overview
+```yaml
+- action: report
+  metadata:
+    name: Lazagne Detected
+    description: Detects LaZagne (SOAR-EDR Tool)
+    falsepositives:
+      - To_be_added
+    level: medium
+    tags:
+      - attack.credential_access
 ```
 
----
+## 🚀 Getting Started
 
-## Contributing
+1. **Prerequisites**
+   - LimaCharlie EDR account and sensors installed
+   - Tines instance configured
+   - Slack workspace with appropriate channels
 
-Contributions are welcome! If you'd like to contribute to the project:
-1. Fork the repository.
-2. Create a new feature branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m 'Add new feature'`.
-4. Push to the branch: `git push origin feature-name`.
-5. Submit a pull request.
+2. **Installation**
+   ```bash
+   # Clone the repository
+   git clone https://github.com/yourusername/soar-edr
+   ```
 
----
+3. **Configuration**
+   - Set up LimaCharlie EDR sensors
+   - Import Tines workflow
+   - Configure Slack integration
 
-## License
+## 🔧 Configuration
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+### LimaCharlie EDR
+```yaml
+detection:
+  rules:
+    - name: lazagne_detection
+      path: events/PROCESS
+      target: windows
+```
 
----
+### Tines Integration
+1. Import the provided workflow
+2. Configure the following agents:
+   - Malware Detection
+   - Alert Processing
+   - User Prompt
+   - Isolation Handler
+   - Message Dispatcher
 
-## Contact
+## 🤝 Contributing
 
-For questions or support, feel free to open an issue in this repository or contact the maintainer at [nattycoder](https://github.com/nattycoder).
+We welcome contributions! Please follow these steps:
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
----
+## 📜 License
 
-Let me know if you’d like to customize this further!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔐 Security
+
+- Report security vulnerabilities to security@yourdomain.com
+- Follow responsible disclosure practices
+- Regular security assessments recommended
+
+## 📞 Support
+
+For support:
+- Open an issue in the repository
+- Contact the security team via Slack
+- Check documentation in the `/docs` folder
+
+## 🎯 Roadmap
+
+- [ ] Additional EDR integrations
+- [ ] Enhanced automated response playbooks
+- [ ] Machine learning-based detection rules
+- [ ] Advanced reporting dashboard
+- [ ] Multi-tenant support
+
+## 🏆 Acknowledgments
+
+- LimaCharlie EDR team
+- Tines automation platform
+- Security community contributors
