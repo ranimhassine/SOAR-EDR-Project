@@ -128,3 +128,4 @@ For support:
 - LimaCharlie EDR team
 - Tines automation platform
 - Security community contributors
+- MyDFIR tutorial (https://youtu.be/WPyJR7Y3qb4?si=IVyBmLlvR_4HlXKv°
