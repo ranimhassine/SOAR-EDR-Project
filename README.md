@@ -84,7 +84,7 @@ detection:
    - User Prompt
    - Isolation Handler
    - Message Dispatcher
-   ![SOAREDR-storyboard](SOAREDR-storyboard .png)
+   ![SOAREDR-storyboard](SOAREDR-storyboard.png)
 
 
 
@@ -103,7 +103,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔐 Security
 
-- Report security vulnerabilities to security@yourdomain.com
+- Report security vulnerabilities to your own email @
 - Follow responsible disclosure practices
 - Regular security assessments recommended
 
