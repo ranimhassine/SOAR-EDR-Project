@@ -84,6 +84,9 @@ detection:
    - User Prompt
    - Isolation Handler
    - Message Dispatcher
+<div align="center">
+  <img src="SOAREDR-storyboard.png" alt="SOAR EDR Storyboard" width="800"/>
+</div>
 
 ## 🤝 Contributing
 
