@@ -28,7 +28,7 @@ An advanced Security Orchestration, Automation, and Response (SOAR) platform int
    - Tines receives detection alerts
    - Automated workflow triggers response actions
    - Slack notifications are generated
-     ![Alert](.png)
+     ![Alert](Alert-Slack.png)
 
 
 3. User Interaction
