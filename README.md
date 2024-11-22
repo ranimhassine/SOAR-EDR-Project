@@ -85,7 +85,7 @@ detection:
    - Isolation Handler
    - Message Dispatcher
 <div align="center">
-  <img src="SOAREDR-storyboard.png" alt="SOAR EDR Storyboard" width="800"/>
+  <img src="SOAREDR-storyboard.png" alt="SOAREDR-storyboard.png" width="800"/>
 </div>
 
 ## 🤝 Contributing
