@@ -84,9 +84,8 @@ detection:
    - User Prompt
    - Isolation Handler
    - Message Dispatcher
-<div align="center">
-  <img src="SOAREDR-storyboard.png" alt="SOAREDR-storyboard.png" width="800"/>
-</div>
+   ![SOAREDR-storyboard.png](SOAREDR-storyboard.png)
+
 
 ## 🤝 Contributing
 
