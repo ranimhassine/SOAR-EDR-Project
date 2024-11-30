@@ -1,4 +1,4 @@
-# 🛡️ SOAR-EDR Automation Platform
+# 🛡️ SOAR-EDR Automation Platform 
 
 An advanced Security Orchestration, Automation, and Response (SOAR) platform integrated with LimaCharlie EDR, featuring automated detection, isolation, and response capabilities.
 
